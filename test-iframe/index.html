@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exercise 3</title>
+  <style>
+    body {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    iframe {
+      width: 50%;
+      height: calc(100vh - 4px);
+      margin: 0;
+      padding: 0;
+      border: black 2px solid;
+      overflow-y: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <iframe id="left" src="left.html" onload="loadLeftFrame()">
+  </iframe>
+  <iframe id="right" src="right.html" onload="loadRightFrame()">
+  </iframe>
+  <script src="script.js"></script>
+</body>
+
+</html>

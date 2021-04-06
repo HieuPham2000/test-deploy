@@ -1,16 +1,58 @@
 <style>
   body {
-    background-color: azure;
+    background: linear-gradient(35deg, #f0ffff, #83c9c9);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 50px;
   }
 
-  submit {
-    background-color: green;
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #a52a2a;
+  }
+
+  button {
+    background-color: #4a4aee;
+    color: #ffffff;
+    border: none;
+    margin: 10px 30px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease-out;
+  }
+
+  button:hover {
+    background-color: #2b2bbe;
+  }
+
+  #submit {
+    background-color: #008000;
+  }
+
+  #submit:hover {
+    background-color: #005e00;
+  }
+
+  input[type="text"] {
+    padding: 5px 10px;
+    width: 50%;
+  }
+
+  @media (max-width: 560px) {
+    h2 {
+      font-size: 25px;
+    } 
+    input[type="text"] {
+    width: 80%;
+  }
   }
 </style>
 
 <body>
-  <h2>Form</h2>
-  <p>What is your favourite blog?</p>
+  <h2>What is your favourite blog?</h2>
   <form id="form-blog-name">
     <input type="text" placeholder="Enter your favorite blog name" name="name" required>
     <br><br>

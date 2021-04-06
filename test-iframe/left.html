@@ -1,13 +1,43 @@
 <style>
   body {
-    background-color: bisque;
-    height: 100%;
+    /* background-color: bisque; */
+    background: linear-gradient(35deg, bisque, rgb(218, 148, 63));
+    text-align: center;
     margin: 0;
     padding: 0;
+    padding-top: 50px;
+    box-sizing: border-box;
+    /* height: 100%;*/
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: brown;
+  }
+
+  #blog-name {
+    width: 60%;
+    font-size: 20px;
+    font-weight: 800;
+    color: #52045c;
+    border: #e46868 2px solid;
+    padding: 5px 20px;
+    margin: auto;
+  }
+
+  @media (max-width: 560px) {
+    h2 {
+      font-size: 25px;
+    }
+    #blog-name {
+      font-size: 15px;
+      width: 70%;
+    }
   }
 </style>
 
 <body>
-  <h2>Your favorite blog</h2>
-  <p id="blog-name">You have not saved your favorite blog yet!</p>
+  <h2>Your favorite blog is ...</h2>
+  <p id="blog-name"></p>
 </body>

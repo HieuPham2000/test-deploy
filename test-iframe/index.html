@@ -3,6 +3,7 @@
 
 <head>
   <title>Exercise 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       width: 100%;
@@ -11,6 +12,8 @@
       flex-direction: row;
       justify-content: space-around;
       box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
@@ -22,6 +25,17 @@
       padding: 0;
       border: black 2px solid;
       overflow-y: hidden;
+    }
+
+    @media (max-width: 560px) {
+      body {
+        flex-direction: column-reverse;
+      }
+      iframe {
+        width: 100%;
+        border: black 1px solid;
+        height: calc(50vh - 2px);
+      }
     }
   </style>
 </head>

@@ -1,29 +1,28 @@
 function pressSubmit() {
-  // var right = document.getElementById("right");
-  // var right_document = right.contentDocument || right.contentWindow.document;
   var nameElement = document.getElementById("right").contentWindow.document.getElementById("form-blog-name").name;
   var name = nameElement.value;
-  console.log("name: " + name);
-  nameElement.value = "";
+  if(name == "") {
+    return;
+  }
   setCookie("blog-name", name, -1);
   setCookie("blog-name", name, 1);
-  console.log("cookie: " + document.cookie);
+  
   setBlogName(getCookie("blog-name"));
 }
 
-function setCookie(cname, cvalue, exdays) {
+function setCookie(cookie_name, cookie_value, expire_days) {
   var d = new Date();
-  d.setTime(d.getTime() + (1*60*1000));
+  d.setTime(d.getTime() + (expire_days*24*60*60*1000));
   var expires = "expires="+ d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  document.cookie = cookie_name + "=" + cookie_value + ";" + expires + ";path=/";
 }
 
-function getCookie(cname) {
-  var name = cname + "=";
+function getCookie(cookie_name) {
+  var name = cookie_name + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for(var i = 0; i <ca.length; i++) {
-    var c = ca[i];
+  var arr = decodedCookie.split(';');
+  for(var i = 0; i <arr.length; i++) {
+    var c = arr[i];
     while (c.charAt(0) == ' ') {
       c = c.substring(1);
     }
